@@ -1,0 +1,140 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:#13097e;
+    color: #252747;
+}
+
+.container {
+    width: min(90%, 650px);
+    margin: 50px auto;
+    padding: 30px;
+    background: rgb(225, 193, 10);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(207, 251, 9, 0.08);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #ffffff;
+    margin-bottom: 28px;
+}
+
+.drop-area {
+    padding: 35px 15px;
+    border: 2px dashed #8c83ed;
+    border-radius: 12px;
+    background: #faf9ff;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.drop-area.dragover {
+    background: #e9e6ff;
+    border-color: #5145cd;
+}
+
+.upload-icon {
+    font-size: 45px;
+}
+
+.drop-area h2 {
+    font-size: 20px;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(225, 193, 10);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4d45bd;
+}
+
+.file-info {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+}
+
+#message {
+    color: #d93025;
+    font-size: 14px;
+}
+
+.preview-container {
+    margin-top: 25px;
+}
+
+#imagePreview {
+    display: block;
+    max-width: 100%;
+    max-height: 280px;
+    margin: 15px auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.progress-container {
+    height: 12px;
+    background: #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: #635bdb;
+    transition: width 0.1s linear;
+}
+
+#progressText {
+    font-size: 13px;
+    color: #666;
+}
+
+.saved-images {
+    margin-top: 35px;
+}
+
+.gallery {
+    display:block;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+        margin: 25px auto;
+    }
+
+    .drop-area {
+        padding: 25px 10px;
+    }
+}

@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop File Uploader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Image Uploader</h1>
+        <p class="subtitle">Upload your images easily</p>
+
+        <div id="dropArea" class="drop-area">
+            <div class="upload-icon">☁️</div>
+            <h2>Drag & Drop Your Image</h2>
+            <p>or</p>
+
+            <button id="browseBtn" type="button">
+                Browse Files
+            </button>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".jpg,.jpeg,.png,.gif,image/jpeg,image/png,image/gif"
+                hidden
+            >
+
+            <p class="file-info">Supported formats: JPG, PNG, GIF</p>
+        </div>
+
+        <p id="message" role="status" aria-live="polite"></p>
+
+        <div id="previewContainer" class="preview-container" hidden>
+            <h3>Image Preview</h3>
+            <img id="imagePreview" alt="Selected image preview">
+
+            <p id="fileName"></p>
+
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <p id="progressText">0%</p>
+        </div>
+
+        <div id="savedImages" class="saved-images">
+            <h3>Saved Images</h3>
+            <div id="gallery" class="gallery"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
